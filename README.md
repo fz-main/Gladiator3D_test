@@ -1,8 +1,8 @@
-# Gladiator Tattoo Studio – Immersive Web Experience
+# Gladiator Tattoo Studio – Brutal Luxury Immersive Site
 
-**Brutal Luxury · Awwwards-level · Built with React Three Fiber**
+Репозиторий полностью готов к деплою на GitHub Pages.
 
-## 🚀 Quick start
+## Быстрый старт
 ```bash
 npm install
 npm run dev
