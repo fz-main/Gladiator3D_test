@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState } from 'react'
 
-const ScrollContext = createContext({ progress: 0 })
+const ScrollContext = createContext(0)
 
 export function ScrollProvider({ children, lenis }) {
   const [progress, setProgress] = useState(0)
