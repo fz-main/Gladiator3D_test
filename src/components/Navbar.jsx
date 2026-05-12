@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { useState } from 'react'
-import './navbar.css'
+import './navbar.css'        // ← точное имя в lowercase
 
 export default function Navbar() {
   const { i18n } = useTranslation()
