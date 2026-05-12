@@ -17,24 +17,11 @@ export default function MapSection() {
       <h2 className="section-title">{t('map.title')}</h2>
       <div className="map-container">
         <img src="/map-prague.png" alt="map" style={{ width: '100%', opacity: 0.4 }} />
-        <div
-          ref={markerRef}
-          className="studio-marker"
-          style={{
-            position: 'absolute',
-            top: '52%',
-            left: '48%',
-            width: 24,
-            height: 24,
-            background: '#ff2d2d',
-            borderRadius: '50%',
-            boxShadow: '0 0 20px #ff2d2d',
-            pointerEvents: 'none',
-          }}
-        />
-        <p style={{ textAlign: 'center', marginTop: '1rem' }}>
-          {t('map.address')}
-        </p>
+        <div ref={markerRef} className="studio-marker" style={{
+          position: 'absolute', top: '52%', left: '48%', width: 24, height: 24,
+          background: '#ff2d2d', borderRadius: '50%', boxShadow: '0 0 20px #ff2d2d',
+        }} />
+        <p style={{ textAlign: 'center', marginTop: '1rem' }}>{t('map.address')}</p>
       </div>
     </section>
   )
