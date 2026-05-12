@@ -17,14 +17,10 @@
   font-size: 1.4rem;
   letter-spacing: 0.15em;
   color: #fff;
-  cursor: pointer;
   transition: transform 0.3s;
 }
 .logo:hover { transform: scale(1.05); }
-.lang-switcher {
-  display: flex;
-  gap: 0.5rem;
-}
+.lang-switcher { display: flex; gap: 0.5rem; }
 .lang-btn {
   background: transparent;
   border: 1px solid rgba(255,255,255,0.2);
@@ -36,9 +32,5 @@
   cursor: pointer;
   transition: all 0.2s;
 }
-.lang-btn.active {
-  background: #ff2d2d;
-  color: white;
-  border-color: #ff2d2d;
-}
+.lang-btn.active { background: #ff2d2d; color: white; border-color: #ff2d2d; }
 .lang-btn:hover { transform: scale(1.05); }
