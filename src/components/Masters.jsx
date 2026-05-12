@@ -16,17 +16,11 @@ export default function Masters() {
   useEffect(() => {
     const cards = containerRef.current.querySelectorAll('.master-card')
     cards.forEach((card) => {
-      gsap.fromTo(card, 
+      gsap.fromTo(card,
         { scale: 0.85, filter: 'brightness(0.6)' },
         {
-          scale: 1,
-          filter: 'brightness(1)',
-          scrollTrigger: {
-            trigger: card,
-            start: 'top 80%',
-            end: 'top 20%',
-            scrub: 1.2,
-          },
+          scale: 1, filter: 'brightness(1)',
+          scrollTrigger: { trigger: card, start: 'top 80%', end: 'top 20%', scrub: 1.2 },
         }
       )
     })
@@ -38,9 +32,7 @@ export default function Masters() {
       <div className="masters-grid">
         {works.map((w, i) => (
           <div key={i} className="master-card" style={{ backgroundImage: `url(${w.src})` }}>
-            <div className="card-overlay">
-              <span>{w.artist}</span>
-            </div>
+            <div className="card-overlay"><span>{w.artist}</span></div>
           </div>
         ))}
       </div>
