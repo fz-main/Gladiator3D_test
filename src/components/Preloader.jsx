@@ -16,17 +16,9 @@ export default function Preloader({ onLoaded }) {
         })
       }
     })
-
-    tl.fromTo(
-      text.current,
+    tl.fromTo(text.current,
       { opacity: 0, scale: 1.2, filter: 'blur(20px)' },
-      {
-        opacity: 1,
-        scale: 1,
-        filter: 'blur(0px)',
-        duration: 1.8,
-        ease: 'power3.out',
-      }
+      { opacity: 1, scale: 1, filter: 'blur(0px)', duration: 1.8, ease: 'power3.out' }
     )
     .to(text.current, {
       keyframes: [
@@ -39,30 +31,16 @@ export default function Preloader({ onLoaded }) {
   }, [])
 
   return (
-    <div
-      ref={container}
-      style={{
-        position: 'fixed',
-        inset: 0,
-        zIndex: 1000,
-        background: '#000',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        clipPath: 'inset(0% 0% 0% 0%)',
-      }}
-    >
-      <h1
-        ref={text}
-        style={{
-          fontFamily: "'Playfair Display', serif",
-          fontSize: 'clamp(3rem, 12vw, 8rem)',
-          letterSpacing: '0.2em',
-          color: '#f0f0f0',
-          textTransform: 'uppercase',
-          userSelect: 'none',
-        }}
-      >
+    <div ref={container} style={{
+      position: 'fixed', inset: 0, zIndex: 1000, background: '#000',
+      display: 'flex', alignItems: 'center', justifyContent: 'center',
+      clipPath: 'inset(0% 0% 0% 0%)'
+    }}>
+      <h1 ref={text} style={{
+        fontFamily: "'Playfair Display', serif",
+        fontSize: 'clamp(3rem, 12vw, 8rem)',
+        letterSpacing: '0.2em', color: '#f0f0f0', textTransform: 'uppercase'
+      }}>
         Gladiator
       </h1>
     </div>
