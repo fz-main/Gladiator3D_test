@@ -16,21 +16,16 @@ export default function Experience() {
   const { camera } = useThree()
 
   useFrame(() => {
-    // GSAP smooth camera animation along Z‑axis
     gsap.to(camera.position, {
       x: cameraPath.start.pos[0] * (1 - progress) + cameraPath.end.pos[0] * progress,
       y: cameraPath.start.pos[1] * (1 - progress) + cameraPath.end.pos[1] * progress,
       z: cameraPath.start.pos[2] * (1 - progress) + cameraPath.end.pos[2] * progress,
-      duration: 0.5,
-      overwrite: true,
+      duration: 0.5, overwrite: true,
     })
-    // lookAt interpolation
-    const lookStart = cameraPath.start.look
-    const lookEnd = cameraPath.end.look
     camera.lookAt(
-      lookStart[0] * (1 - progress) + lookEnd[0] * progress,
-      lookStart[1] * (1 - progress) + lookEnd[1] * progress,
-      lookStart[2] * (1 - progress) + lookEnd[2] * progress,
+      cameraPath.start.look[0] * (1 - progress) + cameraPath.end.look[0] * progress,
+      cameraPath.start.look[1] * (1 - progress) + cameraPath.end.look[1] * progress,
+      cameraPath.start.look[2] * (1 - progress) + cameraPath.end.look[2] * progress,
     )
   })
 
